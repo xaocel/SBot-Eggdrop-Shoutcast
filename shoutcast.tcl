@@ -7,21 +7,21 @@
 package require http
 
 # Set Variables to Shoutcast Webpages
-set siteurl "http://216.104.37.26:9005"
-set listenurl "http://216.104.37.26:9005/listen.pls"
-set lastplayed "http://216.104.37.26:9005/played.html"
+set siteurl "https://shout.madness.ovh"
+set listenurl "https://shout.madness.ovh/listen.pls"
+set lastplayed "https://shout.madness.ovh/played.html"
 
 # Channels Names (Log Channel, DJ Channel, Radio Channel, Main Channel)
-set djchan "#dj"
-set mainchan "#main"
-set logchan "#log"
-set radiochan "#radio"
+set djchan "#djhouse"
+set mainchan "#Kids"
+set logchan "#BotsWorld"
+set radiochan "#HappyMind"
 
 # Set Variables to Database Info
-set dbhost "localhost"
-set dbuser "user"
-set dbpass "password"
-set dbname "db"
+set dbhost "145.239.89.131"
+set dbuser "xaoc"
+set dbpass "shout64587467"
+set dbname "db_shout"
 
 # AutoDJ's Name
 set autodj "AutoDj"
@@ -913,7 +913,7 @@ proc serveroffline {} {
 	global radiochan
 	set radiochan [string tolower $radiochan]
 	set a "Radio || Status: Stream Offline ||"
-	set b " URL: http://216.104.37.26:9005/listen.pls || Want to be a DJ?: http://bit.ly/J6cWtN"
+	set b " URL: https://shout.madness.ovh/listen.pls || Want to be a DJ?: Just Ask Dude..."
 	putnow "TOPIC $radiochan : $a$b"
 }
 
@@ -922,7 +922,7 @@ proc autooffair {} {
 	global radiochan djchan dj
 	set radiochan [string tolower $radiochan]
 	set a "Radio || Status: AutoDJ || "
-	set b "URL: http://216.104.37.26:9005/listen.pls || Want to be a DJ?: http://bit.ly/J6cWtN"
+	set b "URL: https://shout.madness.ovh/listen.pls || Want to be a DJ?: Just Ask Dude..."
 	putnow "PRIVMSG $radiochan :\002OFF AIR\002: $dj is now OFF AIR."
 	putnow "PRIVMSG $djchan :\002OFF AIR\002: $dj is now OFF AIR."
 	putnow "TOPIC $radiochan : $a$b"
@@ -934,7 +934,7 @@ proc offair {} {
 	global radiochan djchan dj
 	set radiochan [string tolower $radiochan]
 	set a "Radio || Status: Stream Offline || "
-	set b "URL: http://216.104.37.26:9005/listen.pls || Want to be a DJ?: http://bit.ly/J6cWtN"
+	set b "URL: https://shout.madness.ovh/listen.pls || Want to be a DJ?: Just Ask Dude..."
 	putnow "PRIVMSG $radiochan :\002OFF AIR\002: $dj is now OFF AIR."
 	putnow "PRIVMSG $djchan :\002OFF AIR\002: $dj is now OFF AIR."
 	putnow "PRIVMSG $djchan :\00304$dj, please remember to \002TURN ON AUTODJ\002 \00304"
