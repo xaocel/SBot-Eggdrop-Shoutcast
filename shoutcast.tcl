@@ -15,10 +15,10 @@ set listenurl "https://shout.madness.ovh/listen.pls"
 set lastplayed "https://shout.madness.ovh/played.html"
 
 # Channels Names (Log Channel, DJ Channel, Radio Channel, Main Channel)
-set djchan "#djhouse"
+set djchan "#BotsWorld"
 set mainchan "#Kids"
 set logchan "#BotsWorld"
-set radiochan "#HappyMind"
+set radiochan "#BotsWorld"
 
 # Set Variables to Database Info
 set dbhost "145.239.89.131"
