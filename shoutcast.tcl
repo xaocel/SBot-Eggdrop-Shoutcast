@@ -10,9 +10,9 @@ package require tls
 
 
 # Set Variables to Shoutcast Webpages
-set siteurl "https://shout.madness.ovh"
-set listenurl "https://shout.madness.ovh/listen.pls"
-set lastplayed "https://shout.madness.ovh/played.html"
+set siteurl "http://185.147.34.191:8000"
+set listenurl "http://185.147.34.191:8000/listen.pls"
+set lastplayed "http://185.147.34.191:8000/played.html"
 
 # Channels Names (Log Channel, DJ Channel, Radio Channel, Main Channel)
 set djchan "#BotsWorld"
@@ -29,7 +29,7 @@ set dbname "db_shout"
 # AutoDJ's Name
 set autodj "AutoDj"
 
-sset song 0
+set song 0
 
 # Binding ! commands to fucntions
 bind pub -|- !lst lastsessions
