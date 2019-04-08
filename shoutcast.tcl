@@ -4,7 +4,10 @@
 
 
 # We need to grab stuff from the internet
-package require http
+package require http;
+package require tls
+::http::register https 443 [list ::tls::socket -ssl2 0 -ssl3 0 -tls1 1]
+
 
 # Set Variables to Shoutcast Webpages
 set siteurl "https://shout.madness.ovh"
