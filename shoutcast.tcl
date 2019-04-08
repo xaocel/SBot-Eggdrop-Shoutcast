@@ -5,8 +5,8 @@
 
 # We need to grab stuff from the internet
 package require http;
-package require tls
-::http::register https 443 [list ::tls::socket -ssl2 0 -ssl3 0 -tls1 1]
+#package require tls
+#::http::register https 443 [list ::tls::socket -ssl2 0 -ssl3 0 -tls1 1]
 
 
 # Set Variables to Shoutcast Webpages
@@ -126,17 +126,17 @@ proc start {} {
 # 		} else {
 # 			set data [::http::data $http_req]
 # 			::http::cleanup $http_req
-# 			if {[regexp {<font class=default>Stream Title: </font></td><td><font class=default><b>([^<]+)</b>} $data x title]} {
+# 			if {[regexp {<font class=default>Stream Name: </font></td><td><font class=default><b>([^<]+)</b>} $data x title]} {
 # 				set dj $title
 # 			} else {
 # 				catch {unset dj}
 # 			}
-# 			if {[regexp {<font class=default>Stream Genre: </font></td><td><font class=default><b>([^<]+)</b>} $data x title]} {
+# 			if {[regexp {<font class=default>Stream Genre(s): </font></td><td><font class=default><b>([^<]+)</b>} $data x title]} {
 # 				set genre $title
 # 			} else {
 # 				catch {unset genre}
 # 			}
-# 			if {[regexp {<font class=default>Current Song: </font></td><td><font class=default><b>([^<]+)</b>} $data x title]} {
+# 			if {[regexp {<font class=default>Playing Now: </font></td><td><font class=default><b>([^<]+)</b>} $data x title]} {
 # 				set song $title
 # 			} else {
 # 				catch {unset song}
